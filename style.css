@@ -1,0 +1,272 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #200000, #000020);
+  overflow: hidden;
+}
+
+.console {
+  width: 50vw;
+  height: 60vh;
+  background: #252a33;
+  color: #eee;
+  font-size: 2vh;
+  font-family: 'Fira Mono', Consolas, Menlo, Monaco, 'Courier New', Courier, monospace;
+  border-radius: 4px;
+  padding: 75px 45px 35px;
+  position: relative;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px 10px #010101;
+}
+
+.console:before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  line-height: 2;
+  border-radius: 50%;
+  background: #d9515d;
+  box-shadow: 25px 0 0 #f4c025, 50px 0 0 #3ec930;
+}
+
+.normalWindow {
+  width: 50vw;
+  height: 60vh;
+  background: #252a33;
+  color: #eee;
+  font-size: 2vh;
+  font-family: 'Arial';
+  border-radius: 4px;
+  padding: 45px 0px 0px;
+  position: relative;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px 10px #010101;
+  position: absolute;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.normalWindow:before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  line-height: 2;
+  border-radius: 50%;
+  background: #d9515d;
+  box-shadow: 25px 0 0 #f4c025, 50px 0 0 #3ec930;
+}
+
+.console:after {
+  content: 'guest@portfolios';
+  position: absolute;
+  color: #a2a2a2;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 2;
+}
+
+[data-ty] {
+  display: block;
+  line-height: 2;
+}
+
+[data-ty]:before {
+  /* Set up defaults and ensure empty lines are displayed. */
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+}
+
+[data-ty="input"]:before,
+[data-ty-prompt]:before {
+  margin-right: 0.75em;
+  color: #a2a2a2;
+}
+
+[data-ty="input"]:before {
+  content: '$';
+}
+
+.animated:after {
+  content: "█";
+  font-family: monospace;
+  animation: blink 1s infinite steps(1,end);
+}
+
+.goodbyeAnimation {
+  animation: goodbye 300ms ease-out;
+}
+
+.exitImage {
+  transform: translate(-50%,-50%) scale(0.2);
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+}
+
+.finalAnimation {
+  display: block;
+  animation: goodbyeFlash 300ms ease-out;
+}
+
+.dollar {
+  color: #9cace5;
+}
+
+#consoleArea {
+  max-height: calc(60vh - 110px);
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* 1px wider than Lion. */
+  /* This is more usable for users trying to click it. */
+  background-color: rgba(0,0,0,0);
+  -webkit-border-radius: 100px;
+}
+/* hover effect for both scrollbar area, and scrollbar 'thumb' */
+::-webkit-scrollbar:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+
+/* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+::-webkit-scrollbar-thumb:vertical {
+  /* This is the EXACT color of Mac OS scrollbars.
+     Yes, I pulled out digital color meter */
+  background: rgba(0,0,0,0.5);
+  -webkit-border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:vertical:active {
+  background: rgba(0,0,0,0.61); /* Some darker color when you click it */
+  -webkit-border-radius: 100px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes goodbye {
+  0% {
+    filter: brightness(100%);
+    transform: scale(1,1);
+  }
+
+  50% {
+    filter: brightness(500%);
+    transform: scale(0.03,1);
+  }
+
+  100% {
+    filter: brightness(1000%);
+    transform: scale(0.03,0.03);
+  }
+}
+
+@keyframes goodbyeFlash {
+  50% {
+    transform: translate(-50%,-50%) scale(2);
+    opacity: 1;
+  }
+}
+
+.separateWindowActive {
+    --scale: 1 !important;
+}
+
+#aboutMeWindow {
+    --translate-x: 13vw;
+    --translate-y: -11vh;
+    --scale: 0;
+    transform:
+        translateX(var(--translate-x, 0))
+        translateY(var(--translate-y, 0))
+        scale(var(--scale, 1))
+}
+
+#programmingWindow {
+    --translate-x: 13vw;
+    --translate-y: 11vh;
+    --scale: 0;
+    transform:
+        translateX(var(--translate-x, 0))
+        translateY(var(--translate-y, 0))
+        scale(var(--scale, 1))
+}
+
+#musicWindow {
+    --translate-x: -13vw;
+    --translate-y: 11vh;
+    --scale: 0;
+    transform:
+        translateX(var(--translate-x, 0))
+        translateY(var(--translate-y, 0))
+        scale(var(--scale, 1))
+}
+
+#videoEditingWindow {
+    --translate-x: -13vw;
+    --translate-y: -11vh;
+    --scale: 0;
+    transform:
+        translateX(var(--translate-x, 0))
+        translateY(var(--translate-y, 0))
+        scale(var(--scale, 1))
+}
+
+.whiteWindow {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, #1a2026, #0e1114);
+  padding: 0px 20px 20px 20px;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Hind Siliguri";
+  font-size: 2.4vh;
+}
+
+.pageContent {
+  position: relative;
+  width: 75%;
+  max-height: calc(100% - 30px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  overflow: auto;
+  text-align: center;
+  padding: 0px 10px;
+}
+
+.titleArea {
+  width: 100%;
+  font-size: 5vh;
+  font-weight: bold;
+}
+
+.projectsButton {
+  font-size: 3vh;
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 50px;
+  margin: 20px 10px 0px 10px;
+  background-color: #252a33;
+  cursor: pointer;
+}

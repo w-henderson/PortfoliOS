@@ -1,0 +1,64 @@
+<html>
+
+<head>
+  <title>William Henderson | PortfoliOS</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&display=swap" rel="stylesheet">
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body onload='document.addEventListener("keydown", inputEvent);startupCheck();' link=white alink=white vlink=white>
+  <div class="console" id="consoleHolder">
+    <div class="animated" id="consoleArea"></div>
+  </div>
+  <div class="normalWindow" id="aboutMeWindow">
+    <div class="whiteWindow">
+      <div class="pageContent">
+        <div class="titleArea">👋 Hello there!</div>
+        I'm William Henderson, and I'm a Computer Science and Mathematics student.
+        I spend most of my time programming, along with a bit of video editing, but when I'm not sitting in front of my computer, I love to play the piano and compose music.
+        I strive to improve at everything I do, and I'm always willing to learn something new.
+        In this portfolio, you'll be able to browse some of my best projects.
+      </div>
+    </div>
+  </div>
+  <div class="normalWindow" id="programmingWindow">
+    <div class="whiteWindow">
+      <div class="pageContent" id="programmingContent">
+        <div class="titleArea">🖥️ Programming</div>
+        I've been programming since I was eight, starting with <a href="http://scratch.mit.edu">Scratch</a> in primary school before swiftly moving on to Python.
+        Now, alongside Python, I'm experienced in JavaScript and C#. Click below to start browsing the projects which I'm most proud of:<br>
+        <div class="projectsButton" onclick="slideshowNext('programming');">Start browsing</div>
+      </div>
+    </div>
+  </div>
+  <div class="normalWindow" id="musicWindow">
+    <div class="whiteWindow">
+      <div class="pageContent" id="musicContent">
+        <div class="titleArea">🎵 Music</div>
+        I've played the piano since I was just four, and I composed my first piece at six.
+        Since then, I reached Grade 5 before quitting grades in favour of focusing on my composition skills.
+        Alongside my work for GCSE Music, I've arranged numerous pieces for both my peers and my family to play across a wide range of genres.
+        Click below to start browsing my wide range of musical projects:<br>
+        <div class="projectsButton" onclick="slideshowNext('music');">Start browsing</div>
+      </div>
+    </div>
+  </div>
+  <div class="normalWindow" id="videoEditingWindow">
+    <div class="whiteWindow">
+      <div class="pageContent" id="video_editingContent">
+        <div class="titleArea">📼 Video Editing</div>
+        As well as showing my creativity through music, I also have quite a lot of experience in video editing.
+        I've been editing since I was around nine, and I've used <a href="https://fxhome.com/hitfilm-express/specs">professional software</a> since thirteen.
+        I'm able to edit in a variety of genres, as you'll see when you click the button below to browse my video projects:<br>
+        <div class="projectsButton" onclick="slideshowNext('video_editing');">Start browsing</div>
+      </div>
+    </div>
+  </div>
+
+  <img src="images/exit.png" id="exitImage" class="exitImage">
+</body>
+
+</html>
