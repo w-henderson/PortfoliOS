@@ -9,6 +9,15 @@ var slideshows = {
       <div class="projectsButton" onclick="window.location='https://github.com/w-henderson/FreeTube-Music'">GitHub</div>
       <div class="projectsButton" onclick="slideshowNext('programming');">Next Project</div>`,
 
+      `<div class="titleArea">🌊 TidesX</div>
+      TidesX is a simple and beautiful web app to check the tide times.
+      While there are tide table apps out there, they all look pretty ugly.
+      I'd wanted to create a nice one for some time, but I couldn't find a tide times API.
+      However, in the summer of 2020, it finally hit me that I didn't need one at all: I could just scrape a website.
+      It sounds inefficient, but in reality it's extremely fast and reliable, making TidesX the best place to go for the tide times.<br>
+      <div class="projectsButton" onclick="window.location='https://github.com/w-henderson/TidesX'">GitHub</div>
+      <div class="projectsButton" onclick="slideshowNext('programming');">Next Project</div>`,
+
       `<div class="titleArea">🦠 Infection Inspection</div>
       Infection Inspection was one of the first mobile games I ever created, back in early 2019.
       The biology-inspired tower defence game sees the player, Wallace the white blood cell, try to defend the heart from increasingly deadly waves of bacteria.
@@ -26,7 +35,7 @@ var slideshows = {
 
       `<div class="titleArea">🔍 UYTS</div>
       Unlimited YouTube Search (UYTS) is a Python library that I've developed to search YouTube without needing the YouTube Data API.
-      You can see it in action in FreeTube, where it provides efficient and unlimited searches through YouTube's vast collection of videos.
+      You can see it in action in FreeTube and FreeTube Music, where it provides efficient and unlimited searches through YouTube's vast collection of videos.
       I always prefer not to use a limited API if possible, and thanks to a YouTube update and a few hours' work, this is now possible in the form of UYTS.<br>
       <div class="projectsButton" onclick="window.location='https://github.com/w-henderson/Unlimited-YouTube-Search'">GitHub</div>
       <div class="projectsButton" onclick="slideshowNext('programming');">Next Project</div>`,

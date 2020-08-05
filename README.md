@@ -11,3 +11,7 @@ I don't think I can stop you, as long as you credit me, but I'd prefer you not t
 
 ## Why aren't phones and tablets supported?
 Functionally, you need a physical keyboard to interact with the console. Practically, their screens are too small to see it properly anyway even if it was scaled. I'll probably make it redirect to a specially-designed mobile portfolio when I get around to it.
+
+# Screenshots
+<img src="images/screenshots/aboutme.png" width=400>
+<img src="images/screenshots/terminal.png" width=400>

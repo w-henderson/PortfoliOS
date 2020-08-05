@@ -182,6 +182,9 @@ function clickToClose(e) {
     dollars[dollars.length-1].scrollIntoView();
     introDone = true;
     document.removeEventListener("click",clickToClose);
+    window.setTimeout(function(target=e.target){
+      document.getElementById(target.id.replace("Window","Content")).innerHTML = slideshows[target.id.replace("Window","")].originalContent;
+    },500);
   }
 }
 
