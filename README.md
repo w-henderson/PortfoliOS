@@ -9,8 +9,8 @@ The whole point of any portfolio is to stand out from the others, and in my case
 ## Can I fork it and use it for myself?
 I don't think I can stop you, as long as you credit me, but I'd prefer you not to, as the whole idea of it being unique pretty much disappears if multiple people have it. Feel free to take inspiration from it though!
 
-## Why aren't phones and tablets supported?
-Functionally, you need a physical keyboard to interact with the console. Practically, their screens are too small to see it properly anyway even if it was scaled. I'll probably make it redirect to a specially-designed mobile portfolio when I get around to it.
+## What if I want to visit on my phone?
+There's a simple version too, and your device should automatically redirect you to it if you're on mobile. If not, the button in the bottom right ("Visit the standard version") will take you there manually. The simple version automatically updates based on the terminal version (hopefully).
 
 # Screenshots
 <img src="images/screenshots/aboutme.png" width=400>

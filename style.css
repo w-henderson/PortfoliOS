@@ -222,7 +222,7 @@ body {
         scale(var(--scale, 1))
 }
 
-#videoEditingWindow {
+#video_editingWindow {
     --translate-x: -13vw;
     --translate-y: -11vh;
     --scale: 0;
@@ -269,4 +269,14 @@ body {
   margin: 20px 10px 0px 10px;
   background-color: #252a33;
   cursor: pointer;
+}
+
+.selectSimple {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 12px;
+  font-family: Arial;
+  padding: 10px;
+  opacity: 0.5;
 }

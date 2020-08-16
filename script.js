@@ -8,7 +8,7 @@ function mobileAndTabletCheck() { // from http://detectmobilebrowsers.com/
 
 function startupCheck() {
   if (mobileAndTabletCheck()) {
-    document.write("Sorry, you'll need to visit on a computer to see my portfolio. This may change in the future, but for now, devices without physical keyboards aren't supported.");
+    window.location = "simple/index.html";
   } else {
     intro();
   }
@@ -133,7 +133,7 @@ function inputEvent(e) {
         introDone = false;
         openExtraWindow();
       } else if (command == "video_editing") {
-        document.getElementById("videoEditingWindow").className = "normalWindow separateWindowActive";
+        document.getElementById("video_editingWindow").className = "normalWindow separateWindowActive";
         document.getElementById("consoleArea").innerHTML += "<br>";
         introDone = false;
         openExtraWindow();
@@ -182,6 +182,7 @@ function clickToClose(e) {
     dollars[dollars.length-1].scrollIntoView();
     introDone = true;
     document.removeEventListener("click",clickToClose);
+    slideshows[e.target.id.replace("Window","")].count = -1;
     window.setTimeout(function(target=e.target){
       document.getElementById(target.id.replace("Window","Content")).innerHTML = slideshows[target.id.replace("Window","")].originalContent;
     },500);
@@ -200,6 +201,8 @@ function slideshowNext(slideshow) {
     introDone = true;
     document.removeEventListener("click",clickToClose);
     slideshows[slideshow].count = -1;
+    var dollars = document.getElementsByClassName("dollar");
+    dollars[dollars.length-1].scrollIntoView();
     window.setTimeout(function(){
       document.getElementById(slideshow+"Content").innerHTML = slideshows[slideshow].originalContent;
     },500);
